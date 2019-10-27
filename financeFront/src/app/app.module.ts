@@ -11,6 +11,7 @@ import { SavingComponent } from './saving/saving.component';
 import { CreditComponent } from './credit/credit.component';
 import { LoansComponent } from './loans/loans.component';
 import { PurchasesComponent } from './purchases/purchases.component';
+import { EducationalComponent } from './educational/educational.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PurchasesComponent } from './purchases/purchases.component';
     SavingComponent,
     CreditComponent,
     LoansComponent,
-    PurchasesComponent
+    PurchasesComponent,
+    EducationalComponent
   ],
   
   imports: [
