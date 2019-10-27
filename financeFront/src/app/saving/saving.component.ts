@@ -7,16 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./saving.component.css']
 })
 export class SavingComponent implements OnInit {
-  info: Financial_Info[];
   authToken: any;
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
   
   
  
   ngOnInit() {
-    this.getOrder().subscribe((data: Financial_Info[]) => {
-      this.info = data;
-    });
   }
 }

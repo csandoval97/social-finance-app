@@ -9,8 +9,8 @@ export class ConfigService {
   baseUri = 'localhost:3000';
   constructor(private httpClient: HttpClient) { }
 
-  public getOrder(){
-    return this.httpClient.get(this.baseUri+'/home/saving',{headers:headers}).pipe(map(res=>res));
+  getOrder(){
+    this.httpClient.get(this.baseUri+'/home/saving').subscribe((data) => console.log(JSON.stringify(data) ) );
   }
   
 }

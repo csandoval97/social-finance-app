@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service'
+import { config } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -6,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public pieChartLabels;//= getLabel()
-  public pieChartData; // = getData()
+  public pieChartLabels = ['hello', 'world', 'welcome','home']//= getLabel()
+  public pieChartData = [10,20,30,40]; // = getData()
   public pieChartType = 'pie';
+
+  tempVar = {};
 
   constructor() { }
 
   ngOnInit() {
-    
   }
 
 
