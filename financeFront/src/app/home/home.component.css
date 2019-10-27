@@ -5,3 +5,7 @@ sidebar-sticky {
 .root{
     width: 100%;
 }
+
+li.borderless {
+    border-top: 0 none;
+  }
