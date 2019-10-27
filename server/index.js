@@ -53,6 +53,12 @@ app.get('/home/credit', (req, res) => {
         value:[10,30,40,100,10,50,300]
     })
 })
+app.get('/home/loan',(req, res) => {
+    res.send({
+        name:['home','vehicle','insurance','education'],
+        value:[1000,2000,500,80000]
+    })
+})
 app.listen(3000, function(){
     console.log("Server on port 3000")
 })
