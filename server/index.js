@@ -59,6 +59,23 @@ app.get('/home/loan',(req, res) => {
         value:[1000,2000,500,80000]
     })
 })
+
+app.get('/saving', (req, res) => {
+    
+})
+app.get('/credit', (req, res) =>{
+    
+})
+app.get('/loan', (req, res) =>{
+
+})
+app.get('/purchase', (req, res) =>{
+    res.send({
+    transaction:['Starbucks','lil-ceasars','Macys','Pets-mart','Jewel-Osco','Fruit-Stand','Movies','PopCorn','Laundry','PC','GameStop'],
+    category:['food','food','clothing','lifestyle','Produce','Produce','entertainment','food','life-style','lifestyle','entertainment'],
+    price:[10,5,100,5,20,6,5,4,5,500,60]
+    })
+})
 app.listen(3000, function(){
     console.log("Server on port 3000")
 })
