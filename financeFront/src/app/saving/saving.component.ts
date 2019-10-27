@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 
 @Component({
@@ -7,12 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./saving.component.css']
 })
 export class SavingComponent implements OnInit {
-  authToken: any;
-
-  constructor() { }
+  constructor(private http:HttpClient) { }
   
-  
- 
-  ngOnInit() {
+  ngOnInit() {  
   }
 }

@@ -37,7 +37,18 @@
       
           <div class="col-10">
             <div class="row">
-                <h3>Purchase History</h3>
+                <table class="table">
+                    <thead>
+                        <th scope="col">Description</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Price</th>
+                    </thead>
+                    <tr *ngFor="let t of transaction; let i = index">
+                        <td>{{t}}</td>
+                        <td>{{category[i]}}</td>
+                        <td>{{price[i]}}</td>
+                    </tr>
+                </table>
             </div>
           </div>
         </div>

@@ -13,6 +13,7 @@ import { LoansComponent } from './loans/loans.component';
 import { PurchasesComponent } from './purchases/purchases.component';
 import { EducationalComponent } from './educational/educational.component';
 import { SettingComponent } from './setting/setting.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SettingComponent } from './setting/setting.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
