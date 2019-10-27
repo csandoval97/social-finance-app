@@ -41,7 +41,18 @@ app.get('/', (req, res)=>{
     res.send({'status':'ok'} )
 })
 
-
+app.get('/home/saving', (req, res) => {
+    res.send({
+        name:['bank-of-america','tcf-bank','bmo-harris','JP-Morgan'],
+        value:[100,200,215,10]
+    })
+})
+app.get('/home/credit', (req, res) => {
+    res.send({
+        name:['food','gas','travel','home-repair','self-care','home-supply','fast-food'],
+        value:[10,30,40,100,10,50,300]
+    })
+})
 app.listen(3000, function(){
     console.log("Server on port 3000")
 })
