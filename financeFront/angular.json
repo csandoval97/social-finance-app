@@ -26,7 +26,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/app/home/home.js"]
           },
           "configurations": {
             "production": {
@@ -87,9 +87,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-            ],
+              
+            ], 
             "styles": [
               "src/styles.css"
+              
             ],
             "scripts": []
           }
