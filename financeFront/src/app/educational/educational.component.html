@@ -11,7 +11,7 @@
     </div> 
 
     <div class="row">
-        <div class="col-2" style="padding-left: 0%;padding-right:30px  ">
+        <div class="col-2" style="padding-left: 0%;padding-right:50px  ">
             <nav class="bg-light sidebar-sticky" >
                 <div class="sidebar-sticky">   
                     <ul class="nav" >
@@ -22,7 +22,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="credits">
-                            Credits Scores/Educational <span class="sr-only">(current)</span>
+                            Credits Scores <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -51,38 +51,48 @@
                             <ng-template #elseif2>
                         <ng-container *ngIf="myNum == 2; else elseif3">A Car</ng-container>
                             <ng-template #elseif3>
-                        <ng-container *ngIf="myNum == 3; else elseif4">Clothing</ng-container>
+                        <ng-container *ngIf="myNum == 3; else elseif4">Fancy Dinner</ng-container>
                             <ng-template #elseif4>
-                        <ng-container *ngIf="myNum == 4; else else1">Fancy Dinner</ng-container>
+                        <ng-container *ngIf="myNum == 4; else else1">Clothing</ng-container>
                             </ng-template>
                         <ng-template #else1>Other</ng-template>
-                    </ng-template>
-                </ng-template>
-
+                            </ng-template>
+                            </ng-template>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <button type="button" class="dropdown-button" (click)="setCounter(1)" >A House</button>
-                      <button type="button" class="dropdown-button" (click)="setCounter(2)" >A Car</button>
-                      <button type="button" class="dropdown-button" (click)="setCounter(3)" >Fancy Dinner</button>
-                      <button type="button" class="dropdown-button" (click)="setCounter(4)" >Clothing</button>
-                      <button type="button" class="dropdown-button" (click)="setCounter(5)" >Other</button>
+                      <button class="dropdown-button" (click)="setCounter(1)" >A House</button>
+                      <button class="dropdown-button" (click)="setCounter(2)" >A Car</button>
+                      <button class="dropdown-button" (click)="setCounter(3)" >Fancy Dinner</button>
+                      <button class="dropdown-button" (click)="setCounter(4)" >Clothing</button>
+                      <button class="dropdown-button" (click)="setCounter(5)" >Other</button>
                     </div>
                   </div>
             </div>
             <div class='col-2'>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Price range
+                        <ng-container *ngIf="myNum1 == 0; else elseIf1">Price Range</ng-container>
+                            <ng-template #elseIf1>
+                        <ng-container *ngIf="myNum1 == 1; else elseIf2">$0-100</ng-container></ng-template>
+                            <ng-template #elseIf2>
+                        <ng-container *ngIf="myNum1 == 2; else elseIf3">$100-500</ng-container></ng-template>
+                            <ng-template #elseIf3>
+                        <ng-container *ngIf="myNum1 == 3; else elseIf4">$500-1000</ng-container></ng-template>
+                            <ng-template #elseIf4>
+                        <ng-container *ngIf="myNum1 == 4; else elseIf5">$1000-5000</ng-container></ng-template>
+                            <ng-template #elseIf5>
+                        <ng-container *ngIf="myNum1 == 5; else else0">$5000-10000</ng-container></ng-template>
+                        <ng-template #else0>10000+</ng-template>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">$0-100</a>
-                      <a class="dropdown-item" href="#">$100-500</a>
-                      <a class="dropdown-item" href="#">$500-1000</a>
-                      <a class="dropdown-item" href="#">$1000-5000</a>
-                      <a class="dropdown-item" href="#">$5000-10000</a>
-                      <a class="dropdown-item" href="#">$10000+</a>
+                      <button class="dropdown-button" (click)="setCounter1(1)" >$0-100</button>
+                      <button class="dropdown-button" (click)="setCounter1(2)" >$100-500</button>
+                      <button class="dropdown-button" (click)="setCounter1(3)" >$500-1000</button>
+                      <button class="dropdown-button" (click)="setCounter1(4)" >$1000-5000</button>
+                      <button class="dropdown-button" (click)="setCounter1(5)" >$5000-10000</button>
+                      <button class="dropdown-button" (click)="setCounter1(6)" >$10000+</button>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class='col-8'>
 

@@ -12,6 +12,7 @@ import { CreditComponent } from './credit/credit.component';
 import { LoansComponent } from './loans/loans.component';
 import { PurchasesComponent } from './purchases/purchases.component';
 import { EducationalComponent } from './educational/educational.component';
+import { SettingComponent } from './setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EducationalComponent } from './educational/educational.component';
     CreditComponent,
     LoansComponent,
     PurchasesComponent,
-    EducationalComponent
+    EducationalComponent,
+    SettingComponent
   ],
   
   imports: [
