@@ -1,6 +1,8 @@
 const fs = require('fs');
-const request = require('request')
+const request = require('request');
+const express = require('express');
 
+var app = express();
 var options = {
     uri:'https://sandbox.api.yodlee.com/ysl/accounts',
     method: 'GET',
@@ -29,13 +31,17 @@ payload.sub = "sbMemRjYGPkpBNaIwx1";
 var token = jwt.sign(payload, privateKey, signOptions);
 options.headers.Authorization += token;  
 
-// https.get(options.headers.Authorization+token, (res)=>{
-//     console.log(res);
-// });
-console.log("Printing token: "+ token);
-console.log("Option: "+ JSON.stringify(options) );
-
 request(options, (err, res, body)=>{
     console.log(err);
     console.log(res);
+})
+
+
+app.get('/', (req, res)=>{
+    res.send({'status':'ok'} )
+})
+
+
+app.listen(3000, function(){
+    console.log("Server on port 3000")
 })
