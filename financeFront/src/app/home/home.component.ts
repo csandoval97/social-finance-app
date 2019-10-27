@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public pieChartLabels = ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'];
-  public pieChartData = [120, 150, 180, 90];
+  public pieChartLabels;//= getLabel()
+  public pieChartData; // = getData()
   public pieChartType = 'pie';
+
   constructor() { }
 
   ngOnInit() {
+    
   }
+
 
 }
